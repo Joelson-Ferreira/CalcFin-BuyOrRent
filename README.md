@@ -9,8 +9,17 @@ Taxa de juros do aluguel por ano.
 Taxa de juros em uma aplicação determinada.
 
 Saídas do programa:
-Exibir qual é a meçhor opção: comprar ou alugar
-Ponto de turnover: até que mês/ano deixa de ser vantajoso um ou outro.
+Valor do Aluguel em 20 anos.
+Valorização do Imóvel após 20 anos.
+Rendimento do Investimento em 20 anos.
+Qual é a melhor opção: comprar ou alugar.
+
+
+Dependências:
+Flask==2.3.2
+Flask-WTF==1.1.1
+
+Execute: `python3 main.py`
 
 Componentes:
     Joelson Ferreira - https://www.linkedin.com/in/joelsons/
@@ -21,6 +30,6 @@ Professor:
 
     
 Informações adicionais:
-    Entrega será até a segunda-feira (31), antes da aula.
+    Entrega será até a segunda-feira (31/07), antes da aula.
     Utilizar apenas as estruturas vistas em aula (Não usar Dataframe).
     Aprensentação em 10 min.

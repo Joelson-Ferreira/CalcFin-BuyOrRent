@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+     <div class="container">
+            <h1>Comprar ou Alugar?</h1>
+            <hr>
+          <div class="row">
+            <div class="col">
+                <img src="{{url_for('static', filename='imagem.jpg', class="img-fluid")}}">
+
+            </div>
+            <div class="col">
+                <h1>Resultado</h1>
+                <div id="resultado">
+                    <p>Valor total do aluguel pago em 20 anos: <b>R$ {{ valor_total_aluguel }}</b></p>
+                    <p>O imóvel após 20 anos valorizou em: <b>R$ {{ valor_imovel }}</b></p>
+                    <p>O valor total investido após 20 anos rendeu: <b>R$ {{ valor_total_investido }}</b></p>
+                    <h2>Decisão: de acordo com a projeção, é mais vantajoso {{ decisao }}</h2>
+                     <br><a id="link-voltar" href="/">Voltar para a página inicial</a>
+                </div>
+            </div>
+          </div>
+     </div>
+{% endblock %}

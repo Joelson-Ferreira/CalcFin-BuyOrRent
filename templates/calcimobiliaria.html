@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Comprar ou Alugar?</h1>
+        <hr>
+      <div class="row">
+        <div class="col">
+            <img src="{{url_for('static', filename='imagem.jpg', class="img-fluid")}}">
+            {% for usuario in lista_usuarios%}
+                <p>{{ usuario }}</p>
+                <hr>
+            {% endfor %}
+
+        </div>
+        <div class="col">
+            <form method="POST" action="" class="border p-4 m-2">
+                {{ formCalc.csrf_token }}
+                <legeng> </legeng>
+                <fieldset>
+                    <div class="form-group">
+                        {{ formCalc.valor_mensal_aluguel.label(class='form-control-label')}}
+                        {% if formCalc.valor_mensal_aluguel.errors %}
+                            {{formCalc.valor_mensal_aluguel(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for erro in formCalc.valor_mensal_aluguel.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{ formCalc.valor_mensal_aluguel(class="form-control") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ formCalc.valor_compra_imovel.label(class='form-control-label')}}
+                        {% if formCalc.valor_compra_imovel.errors %}
+                            {{formCalc.valor_compra_imovel(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for erro in formCalc.valor_compra_imovel.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{ formCalc.valor_compra_imovel(class="form-control") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ formCalc.taxa_valorizacao_imovel.label(class='form-control-label')}}
+                        {% if formCalc.taxa_valorizacao_imovel.errors %}
+                            {{formCalc.taxa_valorizacao_imovel(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for erro in formCalc.taxa_valorizacao_imovel.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{ formCalc.taxa_valorizacao_imovel(class="form-control") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ formCalc.taxa_aumento_aluguel.label(class='form-control-label')}}
+                        {% if formCalc.taxa_aumento_aluguel.errors %}
+                            {{formCalc.taxa_aumento_aluguel(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for erro in formCalc.taxa_aumento_aluguel.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{ formCalc.taxa_aumento_aluguel(class="form-control") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ formCalc.taxa_juros_aplicacao.label(class='form-control-label')}}
+                        {% if formCalc.taxa_juros_aplicacao.errors %}
+                            {{formCalc.taxa_juros_aplicacao(class="form-control is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for erro in formCalc.taxa_juros_aplicacao.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{ formCalc.taxa_juros_aplicacao(class="form-control") }}
+                        {% endif %}
+                        
+                    </div>
+                </fieldset>
+                {{ formCalc.botao_calcular(class='btn btn-primary mt-3') }}
+                {{ formCalc.botao_limpar(class='btn btn-primary mt-3') }}
+            </form>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

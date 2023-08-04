@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+ <div class="container">
+        <h1>Comprar ou Alugar?</h1>
+        <hr>
+      <div class="row">
+        <div class="col">
+            <img src="{{url_for('static', filename='imagem.jpg', class="img-fluid")}}">
+            {% for usuario in lista_usuarios%}
+                <p>{{ usuario }}</p>
+                <hr>
+            {% endfor %}
+
+        </div>
+        <div class="col">
+            <form method="POST" action="" class="border p-4 m-2">
+                <legeng>  </legeng>
+                <fieldset>
+                    <h5> Contato: </h5>
+                    <p> </p>
+
+                    <p> Joelson Ferreira:  <a href="https://www.linkedin.com/in/joelsons/" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
+                    <p> Liliane Aquino:  <a href="https://www.linkedin.com/in/liliane-l-de-aquino-a2999898/" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
+
+                </fieldset>
+
+            </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
