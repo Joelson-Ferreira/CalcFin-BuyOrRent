@@ -16,10 +16,10 @@ Qual é a melhor opção: comprar ou alugar.
 
 
 Dependências:
-Flask==2.3.2
-Flask-WTF==1.1.1
+<p> Flask==2.3.2 </p>
+<p> Flask-WTF==1.1.1 </p>
 
-Execute: `python3 main.py`
+<p> Execute: `python3 main.py` </p>
 
 <p align="center">
   <img width="720" height="420" src="static/Tela Inicial.png">
