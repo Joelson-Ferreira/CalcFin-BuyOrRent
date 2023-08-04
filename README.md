@@ -21,12 +21,28 @@ Flask-WTF==1.1.1
 
 Execute: `python3 main.py`
 
+<p align="center">
+  <img width="720" height="420" src="static/Tela Inicial.png">
+</p>
+
+<p align="center">
+  <img width="720" height="420" src="static/Preenchimento.png">
+</p>
+
+<p align="center">
+  <img width="720" height="420" src="static/Resultado.png">
+</p>
+
+<p align="center">
+  <img width="720" height="420" src="static/Contato.png">
+</p>
+
 Componentes:
-    Joelson Ferreira - https://www.linkedin.com/in/joelsons/
-    Liliane de Aquino - https://www.linkedin.com/in/liliane-l-de-aquino-a2999898/
+    <p> Joelson Ferreira - https://www.linkedin.com/in/joelsons/ </p>
+    <p> Liliane de Aquino - https://www.linkedin.com/in/liliane-l-de-aquino-a2999898/ </p>
 
 Professor:
-    Igor Garcia - https://www.linkedin.com/in/igorgbs/
+    <p> Igor Garcia - https://www.linkedin.com/in/igorgbs/ </p>
 
     
 Informações adicionais:
